@@ -87,3 +87,4 @@ if "obs_vsig" in kin_uc:
     kin_uc = kin_uc.assign(corr_vsig = 10**(np.log10(kin_uc.obs_vsig) - dvsig))
 
 kin_uc.to_csv(args.outputFile, index=False)
+print("New data file with added corrected kinematics written at: ", args.outputFile)
